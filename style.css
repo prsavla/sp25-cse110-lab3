@@ -14,7 +14,6 @@
   body {
     margin: 0;
     padding: 1rem;
-    background-color: color(display-p3 0.9 0.95 1);
     color: #333;
   }
   
@@ -23,6 +22,7 @@
   }
   
   p, li {
+        color: red; 
     color: color-mix(in srgb, orange 60%, red 40%);
   }
   
@@ -136,8 +136,6 @@
       grid-template-columns: 1fr;
     }
   }
-  
-  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
   .class-selector {
     color: green;
   }

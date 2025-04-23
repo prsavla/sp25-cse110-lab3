@@ -23,7 +23,6 @@
   
   p, li {
         color: red; 
-    color: color-mix(in srgb, orange 60%, red 40%);
   }
   
   li:hover {

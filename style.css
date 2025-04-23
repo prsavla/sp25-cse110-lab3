@@ -1,0 +1,192 @@
+  :root {
+  --primary-color: hsl(220, 80%, 60%);
+  --secondary-color: color(display-p3 0.8 0.3 0.6);
+  --fallback-color: red;
+  --background-light: #f9f9f9;
+  --text-color: black;
+  --accent-color: color-mix(in srgb, orange 70%, yellow);
+}
+  body {
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: var(--background-light, #ffffff);
+    color: var(--text-color);
+    padding: 2rem;
+  }
+  
+  header, section {
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    background-color: #ffffff;
+  }
+  
+  h1, h2, h3 {
+    color: var(--primary-color);
+    text-align: center;
+  }
+  
+  ul, ol {
+    padding-left: 2rem;
+    margin-top: 1rem;
+  }
+  
+  li:hover {
+    background-color: var(--accent-color);
+    cursor: pointer;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 4px solid var(--secondary-color);
+    border-radius: 10px;
+    margin: 1rem auto;
+  }
+  
+  figure > figcaption {
+    text-align: center;
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+  
+  audio, video {
+    display: block;
+    margin: 1rem auto;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px dashed var(--primary-color);
+  }
+  
+  input, select, textarea, button {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  button:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  /* === Flexbox Example === */
+  section:nth-of-type(2) ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  /* === Grid Example === */
+  section:nth-of-type(3) ol {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  
+  /* === Media Query === */
+  @media screen and (max-width: 600px) {
+    body {
+      padding: 1rem;
+    }
+    header, section {
+      padding: 1rem;
+    }
+  }
+  
+  /* === CSS Selectors === */
+  .classy {
+    color: blue;
+  }
+  
+  #unique-heading {
+    font-size: 2rem;
+  }
+  
+  [alt="W3 Schools Validation"] {
+    border-color: green;
+  }
+  
+  p:hover {
+    background-color: lightgray;
+  }
+  
+  h2, h3 {
+    font-weight: bold;
+  }
+  
+  form > fieldset > label + input {
+    border-color: orange;
+  }
+  
+  section ~ section {
+    background-color: #f0f0f0;
+  }
+  
+  h2 + ul {
+    border-left: 5px solid var(--secondary-color);
+  }
+  
+  h2.has(~ ul) {
+    background-color: lightyellow;
+  }
+  
+  /* === Positioning === */
+  header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+  }
+  
+  /* === Nested Selectors Example === */
+  form {
+    & label {
+      font-weight: bold;
+    }
+  
+    & textarea {
+      resize: vertical;
+    }
+  }
+  section {
+    margin: 20px 10px 20px 10px; /* shorthand */
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--primary-color);
+    border-radius: 12px;
+  }
+  .hidden {
+    display: none;
+  }
+  .inline-box {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background-color: pink;
+    margin: 1rem;
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+  
+  .button:hover {
+    animation: bounce 0.4s ease-in-out;
+  }
